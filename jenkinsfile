@@ -1,0 +1,29 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Install') {
+      steps {
+        sh 'npm install'
+      }
+    }
+
+    stage('Test') {
+      steps {
+        sh 'echo Testing...'
+      }
+    }
+
+    stage('Build Docker') {
+      steps {
+        sh 'docker build -t backend-app .'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        sh 'docker run -d -p 5000:5000 backend-app'
+      }
+    }
+  }
+}
