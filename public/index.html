@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fullstack Backend Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🚀 Fullstack Backend Demo</h1>
+
+  <div class="card">
+    <h2>Create MongoDB User</h2>
+    <input type="text" id="mongoName" placeholder="Name">
+    <input type="email" id="mongoEmail" placeholder="Email">
+    <button onclick="createMongoUser()">Save to MongoDB</button>
+  </div>
+
+  <div class="card">
+    <h2>Create MySQL User</h2>
+    <input type="text" id="sqlName" placeholder="Name">
+    <input type="email" id="sqlEmail" placeholder="Email">
+    <button onclick="createSQLUser()">Save to MySQL</button>
+  </div>
+
+  <p id="response"></p>
+
+  <script src="app.js"></script>
+</body>
+</html>
